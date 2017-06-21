@@ -1,0 +1,23 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Sat Jun 17 16:23:19 2017
+Invocation: foremost md5.gif 
+Output directory: /Users/koba/workspace-2017/ctf/google-ctf/output
+Configuration file: /usr/local/etc/foremost.conf
+------------------------------------------------------------------
+File: md5.gif
+Start: Sat Jun 17 16:23:19 2017
+Length: Unknown
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+0:	00000000.gif 	      83 KB 	          0 	  (855 x 203)
+Finish: Sat Jun 17 16:23:19 2017
+
+1 FILES EXTRACTED
+	
+gif:= 1
+------------------------------------------------------------------
+
+Foremost finished at Sat Jun 17 16:23:19 2017
