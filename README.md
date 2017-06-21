@@ -1,6 +1,6 @@
 # ctfs
 
-CTFに関する知識をためる.
+CTFメモ
 
 ### ジャンル別メモ
 * [Pwn note](https://github.com/kobad/ctfs/blob/master/docs/pwn.md)
