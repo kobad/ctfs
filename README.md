@@ -13,6 +13,8 @@ CTFメモ
 * MAGURO - https://score.maguro.run/#/
 * ksnctf - http://ksnctf.sweetduet.info/
 * OverTheWire - http://overthewire.org/wargames/
+* ReversingKr - http://reversing.kr/
+* LSE CTF - https://ctf.lse.epita.fr/
 * list
 	* Pwnlist - http://pastebin.com/uyifxgPu
 	* Crypto Challenges List(2015) (by eshiho) - http://pastebin.com/cSfZW2yX
