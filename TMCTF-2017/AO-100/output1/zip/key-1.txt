@@ -1,0 +1,12 @@
+src 192.168.30.211 dst 192.168.30.251
+        proto esp spi 0xc300fae7 reqid 1 mode transport
+        replay-window 32
+        auth hmac(sha1) 0x2f279b853294aad4547d5773e5108de7717f5284
+        enc cbc(aes) 0x9d1d2cfa9fa8be81f3e735090c7bd272
+        sel src 192.168.30.211/32 dst 192.168.30.251/32
+src 192.168.30.251 dst 192.168.30.211
+        proto esp spi 0xce66f4fa reqid 1 mode transport
+        replay-window 32
+        auth hmac(sha1) 0x3bf9c1a31f707731a762ea45a85e21a2192797a3
+        enc cbc(aes) 0x886f7e33d21c79ea5bac61e3e17c0422
+        sel src 192.168.30.251/32 dst 192.168.30.211/32

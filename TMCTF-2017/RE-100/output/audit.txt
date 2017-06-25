@@ -1,0 +1,25 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Sat Jun 24 14:18:50 2017
+Invocation: foremost biscuit3.jpeg 
+Output directory: /Users/koba/ctfs/TMCTF-2017/output
+Configuration file: /usr/local/etc/foremost.conf
+------------------------------------------------------------------
+File: biscuit3.jpeg
+Start: Sat Jun 24 14:18:50 2017
+Length: Unknown
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+0:	00000000.jpg 	      13 KB 	          0 	 
+1:	00000027.zip 	      126 B 	      14253 	 
+Finish: Sat Jun 24 14:18:50 2017
+
+2 FILES EXTRACTED
+	
+jpg:= 1
+zip:= 1
+------------------------------------------------------------------
+
+Foremost finished at Sat Jun 24 14:18:50 2017

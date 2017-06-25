@@ -1,0 +1,23 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Sat Jun 24 20:26:48 2017
+Invocation: foremost Forensic_Encyption 
+Output directory: /Users/koba/ctfs/TMCTF-2017/output
+Configuration file: /usr/local/etc/foremost.conf
+------------------------------------------------------------------
+File: Forensic_Encyption
+Start: Sat Jun 24 20:26:48 2017
+Length: Unknown
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+0:	00000026.zip 	      16 KB 	      13390 	 
+Finish: Sat Jun 24 20:26:48 2017
+
+1 FILES EXTRACTED
+	
+zip:= 1
+------------------------------------------------------------------
+
+Foremost finished at Sat Jun 24 20:26:48 2017
