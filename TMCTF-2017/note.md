@@ -51,3 +51,5 @@ APZTQQHYCKDLQZRG is encrypted.
 http://enigma.louisedade.co.uk/enigma.html
 
 ![enigma](enigma.png)
+
+TMCTF{RISINGSUNANDMOON}
