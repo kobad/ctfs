@@ -3,7 +3,7 @@
 CTFメモ
 
 ### ジャンル別メモ
-* [Pwn note](https://github.com/kobad/ctfs/blob/master/docs/pwn.md)
+* [Pwn note](https://github.com/kobadlve/ctfs/blob/master/docs/pwn.md)
 
 
 # CTF関連サイト
