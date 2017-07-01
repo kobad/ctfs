@@ -4,8 +4,10 @@
 
 ## Level 0
 
-1. `ssh bandit0@bandit.labs.overthewire.org`
-2. `password: bandit0`
+```
+ssh bandit0@bandit.labs.overthewire.org
+password: bandit0
+```
 
 ## Level 0>1
 
@@ -17,11 +19,16 @@
 
 ## Level 2>3
 
-`space in this file`というファイルがある. `cat space\ in\ this\ filename`でok
+`space in this file`というファイルがある.
+```
+cat space\ in\ this\ filename
+```
 
 ## Level 3>4
 
-`cat inhere/.hidden`
+```
+cat inhere/.hidden
+```
 
 ## Level 4>5
 
@@ -30,14 +37,21 @@
 
 ## Level 5>6
 
-ヒントでサイズが1033とあるので、`ls -al inhere/*/ | grep -10 1033`とすると見つかる。
+ヒントでサイズが1033とあるので、
+```
+ls -al inhere/*/ | grep -10 1033 (とすると見つかる。)
+cat inhere/maybehere07/.file2
+```
 
-`cat inhere/maybehere07/.file2`
 ## Level 6>7
 
-ヒントでowned by user bandit7とあるので、findで探す。`find / -user bandit7`
-
-`/etc/bandit_pass/bandit7`, `/var/lib/dpkg/info/bandit7.password`が見つかる。後者が答え。
+ヒントでowned by user bandit7とあるので、findで探す。
+```
+find / -user bandit7
+/etc/bandit_pass/bandit7
+/var/lib/dpkg/info/bandit7.password
+```
+が見つかる。後者が答え。
 
 ## Level 7>8
 
@@ -97,7 +111,9 @@ ROT13で復号する。
 
 だが、`HEARTBEATING, Read R BLOCK`というのが出てしまうので最後に`-ign_eof`オプションをつける。
 
-`openssl s_client -connect localhost:30001 -CAfile .bandit14.password -ign_eof`
+```
+openssl s_client -connect localhost:30001 -CAfile .bandit14.password -ign_eof
+```
 
 ## Level 16>17
 
@@ -126,12 +142,17 @@ PORT      STATE SERVICE
 
 これをコピーして、ローカルからbandit17に接続できる。
 
-`ssh -i privatekey bandit17@bandit.labs.overthewire.org`
+```
+ssh -i privatekey bandit17@bandit.labs.overthewire.org
+```
 
 
 ## Level 17>18
 
-`password.new`, `password.old`があり、`password.new`にしか無い文字列が答えなので、`diff password.new password.old`で出る
+`password.new`, `password.old`があり、`password.new`にしか無い文字列が答えなので、
+```
+diff password.new password.old
+```
 
 ## Level 18>19
 

