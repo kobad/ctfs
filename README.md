@@ -2,10 +2,6 @@
 
 CTFメモ
 
-### ジャンル別メモ
-* [Pwn note](https://github.com/kobadlve/ctfs/blob/master/pwn.md)
-
-
 # CTF関連サイト
 * CTFtimes - https://ctftime.org/
 * Pwnable - http://pwnable.kr/
