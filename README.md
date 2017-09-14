@@ -67,61 +67,36 @@ https://securedorg.github.io/RE101/
 * Immunity debug
 * radare2
 * Java
-	* JAD
 	* Java Decompiler
-	* Procyon
-	* Ref: http://code.google.com/p/umjammer/wiki/JavaReverseEngineering
 * .NET Framework
 	*	ILSpy
 * for Android
 	* apktool
 	* smali/baksmali (逆アセンブラ)
 	* dex2jar (Javaに変換して逆コンパイル可能に)
-	* https://apkstudio.codeplex.com/ apkファイルを直接修正
-	* https://bytecodeviewer.com
-	* jadx
 
 ## Crypto
-* mouse code - http://morsecode.scphillips.com/translator.html
+* mourse code - http://morsecode.scphillips.com/translator.html
 
 ## Network
 * Wireshark
 * netcat, socat
 * nmap, zmap
 * tcpdump
-* tcpreplay
-* tcprewrite
-* ssldump
-* ngrep
-* tcptrace
-
 
 ## Web
 * curl
-* Fiddler
-* nikto
-* 各種ブラウザ（特にFirefox, Chrome)
-* HTTP通信を覗くツール(Live HTTP Headers(Firefox)やWiresharkなど)
-* mitmproxy
-* JavaScript Debugger(FirefoxならFireBug, OperaならDragonFlyなど…)
-* dotjs 特定ドメインにアクセス時に指定したJavaScriptを実行する
-* jsdetox (JavaScript難読化解除)
-* cadaver(ftp likeなWebDav Client)
+* Fiddler, Burp Proxy
+* Wireshark
 
 ## Forensic
 * foremost
 * PhotoRec/TestDisk
 * OSFMount (WindowsでHDDイメージをマウントしたいとき
 * The Sleuth Kit / Autopsy
-* qemu-nbd
-* kpartx
 * 7zip
-* zip repair zipファイルの復元
-* http://sourceforge.net/projects/tcpxtract/ パケットキャプチャーからファイルを取り出す
 * Volatility (システムメモリダンプ解析)
 * analyzeMFT (NTFSのMFT解析)
 * exiftool
 
-
 ## Misc
-* 画像変換 - http://www.bannerkoubou.com/photoeditor/conversion
