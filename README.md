@@ -1,9 +1,9 @@
 # ctfs
 
-CTFメモ
-
-# CTF関連サイト
 * CTFtimes - https://ctftime.org/
+* CTFs - https://github.com/ctfs
+
+# 常設サイト
 * Pwnable - http://pwnable.kr/
 * Pwnable.tw - https://pwnable.tw/
 * MMACTF - https://ctf.mma.club.uec.ac.jp/
@@ -18,10 +18,6 @@ CTFメモ
 	* Crypto Challenges List(2016) (by eshiho) - http://pastebin.com/28SrvQ9b
 	* Web Challenges List 2016 (by 193s) - http://pastebin.com/6EH6X0yL
 	* rev challenges list (by N4NU) - http://pastebin.com/q7LGi8w5
-
-# Write up
-* CTFs - https://github.com/ctfs
-* p4 - https://github.com/p4-team/ctf
 
 # 参考資料
 ## Pwn
