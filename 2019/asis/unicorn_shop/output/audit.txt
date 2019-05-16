@@ -1,0 +1,50 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Sat Apr 20 17:35:25 2019
+Invocation: foremost Black_and_white_unicorn.jpg ultra_unicorn.jpg unicorn_family.jpg warrior_unicorn.jpg 
+Output directory: /home/vagrant/ctfs/2019/asis/unicorn_shop/output
+Configuration file: /etc/foremost.conf
+------------------------------------------------------------------
+File: Black_and_white_unicorn.jpg
+Start: Sat Apr 20 17:35:25 2019
+Length: 768 KB (787242 bytes)
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+0:	00000000.jpg 	     768 KB 	          0 	 
+Finish: Sat Apr 20 17:35:25 2019
+------------------------------------------------------------------
+File: ultra_unicorn.jpg
+Start: Sat Apr 20 17:35:25 2019
+Length: 325 KB (333091 bytes)
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+1:	00000000_1.jpg 	     325 KB 	          0 	 
+Finish: Sat Apr 20 17:35:25 2019
+------------------------------------------------------------------
+File: unicorn_family.jpg
+Start: Sat Apr 20 17:35:25 2019
+Length: 752 KB (771048 bytes)
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+2:	00000000_2.jpg 	     752 KB 	          0 	 
+Finish: Sat Apr 20 17:35:25 2019
+------------------------------------------------------------------
+File: warrior_unicorn.jpg
+Start: Sat Apr 20 17:35:25 2019
+Length: 1 MB (1718629 bytes)
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+3:	00000000_3.jpg 	       1 MB 	          0 	 
+Finish: Sat Apr 20 17:35:25 2019
+
+4 FILES EXTRACTED
+	
+jpg:= 4
+------------------------------------------------------------------
+
+Foremost finished at Sat Apr 20 17:35:25 2019
