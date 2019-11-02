@@ -9,30 +9,13 @@ def crc32(crc, data):
       crc = (crc >> 1) ^ (0xEDB88320 * (crc & 1))
   return 0xFFFFFFFF ^ crc
 
-def dec(crc, data):
-  crc = 0xFFFFFFFF ^ crc
-  for c in data:
-    crc = crc ^ ord(c)
-    for i in range(8):
-      crc = (crc >> 1) ^ (0xEDB88320 * (crc & 1))
-  return 0xFFFFFFFF ^ crc
-
-
-crc = 0xb09bc54f
-crc2 = 0x474c2650
-print(hex(dec(crc2, "TSG")))
-
-
-exit()
-
 key = b""
 
+count = 169873741
+
 crc = 0
-for i in range(int("1" * 1000)):
-  con = crc ^ 0xFFFFFFFF
-  if con == 0xb09bc54f:
-      print("i: ", con)
-      break
+print(int("1" * 100000))
+for i in range(count):
   crc = crc32(crc, "TSG")
 assert(crc == 0xb09bc54f)
 key += crc.to_bytes(4, byteorder='big')
