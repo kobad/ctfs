@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<style type="text/css">
+	body {
+		background-color : black;
+	}
+</style>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Pure nonsense</title>  
+</head>
+
+<body>
+<img src='pack/Png/alpha.png'/>
+<img src='pack/Png/beta.png'/>
+<img src='pack/Png/delta.png'/>
+<img src='pack/Png/easpq.png'/>
+<img src='pack/Png/fmoews.png'/>
+<img src='pack/Png/gama.png'/>
+<img src='pack/Png/gkreoq.png'/>
+<img src='pack/Png/htqows.png'/>
+<img src='pack/Png/kgtre.png'/>
+<img src='pack/Png/relwpq.png'/>
+<img src='pack/Png/rfeko.png'/>
+<img src='pack/Png/tplrpe.png'/>
+<img src='pack/Png/true.png'/>
+</body>
+
+</html>
